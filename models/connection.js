@@ -8,7 +8,7 @@ var options = {
  };
 
 
-mongoose.connect('mongodb+srv://admin:MongoPassWord@cluster0.jutpi.mongodb.net/mymovizapp?retryWrites=true&w=majority',
+mongoose.connect(process.env.MONGO_CONNECTION_STRING,
    options,
    function(err) {
     if (err) {
